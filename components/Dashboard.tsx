@@ -137,7 +137,7 @@ export default function Dashboard({ user, isAdmin }: DashboardProps) {
                   : 'text-gray-500 border-transparent hover:text-gray-700'
               }`}
             >
-              ➕ Add Lead
+              Add Lead
             </button>
             <button
               type="button"
@@ -148,8 +148,8 @@ export default function Dashboard({ user, isAdmin }: DashboardProps) {
                   : 'text-gray-500 border-transparent hover:text-gray-700'
               }`}
             >
-              📋 Dashboard
-            </button>
+                Dashboard
+              </button>
           </div>
         </div>
       </div>
