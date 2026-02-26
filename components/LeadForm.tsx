@@ -162,7 +162,7 @@ export default function LeadForm({ user, showToast, onSuccess }: LeadFormProps) 
                 type="text"
                 value={form.interest}
                 onChange={(e) => update('interest', e.target.value)}
-                placeholder="e.g. 3-Bed Apartment, Plot in DHA"
+                placeholder="e.g. Property or project interest"
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
               />
             </div>
