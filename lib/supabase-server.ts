@@ -20,7 +20,11 @@ export const createServerClient = () => {
         },
         set(name: string, value: string, options: CookieOptions) {
           try {
-            cookieStore.set({ name, value, ...options });
+            const isAuthCookie = name.includes('auth-token');
+            const persistentOptions = isAuthCookie
+              ? { ...options, maxAge: 60 * 60 * 24 * 30, path: '/', sameSite: 'lax' as const }
+              : options;
+            cookieStore.set({ name, value, ...persistentOptions });
           } catch {
             // ignore in Server Components
           }
