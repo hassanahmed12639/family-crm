@@ -149,34 +149,34 @@ export default function LeadsTable({
   }
 
   return (
-    <div className="space-y-4">
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <h2 className="text-lg font-semibold text-gray-800">
+    <div className="space-y-4 min-w-0">
+      <div className="flex flex-wrap items-center justify-between gap-2 sm:gap-3">
+        <h2 className="text-base sm:text-lg font-semibold text-gray-800 truncate min-w-0">
           {isAdmin ? 'All Walk-in Leads' : 'My Walk-in Leads'}
         </h2>
         {isAdmin && (
           <button
             type="button"
             onClick={handleExport}
-            className="border border-gray-300 hover:border-gray-400 text-gray-700 font-semibold py-2 px-4 rounded-lg text-sm transition-colors bg-white hover:bg-gray-50"
+            className="border border-gray-300 hover:border-gray-400 text-gray-700 font-semibold py-2 px-3 sm:px-4 rounded-lg text-xs sm:text-sm transition-colors bg-white hover:bg-gray-50 shrink-0 touch-manipulation"
           >
             ⬇ Export Excel
           </button>
         )}
       </div>
 
-      <div className="bg-white border border-gray-200 rounded-xl p-4 mb-4 flex flex-wrap gap-3">
+      <div className="bg-white border border-gray-200 rounded-xl p-3 sm:p-4 mb-4 flex flex-wrap gap-2 sm:gap-3">
         <input
           type="text"
-          placeholder={isAdmin ? 'Search name, phone, salesperson, interest...' : 'Search name, phone, interest...'}
+          placeholder={isAdmin ? 'Search...' : 'Search...'}
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="flex-1 min-w-[12rem] px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+          className="w-full min-w-0 flex-1 sm:min-w-[12rem] px-3 py-2.5 sm:py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
         />
         <select
           value={statusFilter}
           onChange={(e) => setStatusFilter(e.target.value)}
-          className="px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+          className="w-full sm:w-auto min-w-0 px-3 py-2.5 sm:py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white touch-manipulation"
         >
           <option value="all">All</option>
           <option value="new">New</option>
@@ -187,7 +187,7 @@ export default function LeadsTable({
         <select
           value={sourceFilter}
           onChange={(e) => setSourceFilter(e.target.value)}
-          className="px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+          className="w-full sm:w-auto min-w-0 px-3 py-2.5 sm:py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white touch-manipulation"
         >
           <option value="all">All</option>
           <option value="walk-in">Walk-in</option>
@@ -199,19 +199,19 @@ export default function LeadsTable({
           type="date"
           value={dateFilter}
           onChange={(e) => setDateFilter(e.target.value)}
-          className="px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+          className="w-full sm:w-auto min-w-0 px-3 py-2.5 sm:py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white touch-manipulation"
         />
         <button
           type="button"
           onClick={clearFilters}
-          className="border border-gray-300 hover:border-gray-400 text-gray-700 font-semibold py-2 px-4 rounded-lg text-sm transition-colors bg-white hover:bg-gray-50"
+          className="w-full sm:w-auto border border-gray-300 hover:border-gray-400 text-gray-700 font-semibold py-2.5 sm:py-2 px-4 rounded-lg text-sm transition-colors bg-white hover:bg-gray-50 touch-manipulation"
         >
           Clear
         </button>
-        <span className="text-xs text-gray-500 self-center">Showing {filtered.length} leads</span>
+        <span className="text-xs text-gray-500 self-center w-full sm:w-auto">Showing {filtered.length} leads</span>
       </div>
 
-      <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+      <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden min-w-0">
         <div className="overflow-x-auto">
           {filtered.length === 0 ? (
             <div className="py-16 text-center">

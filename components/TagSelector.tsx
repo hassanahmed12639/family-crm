@@ -41,9 +41,9 @@ export default function TagSelector({ selected, onChange }: TagSelectorProps) {
   }
 
   return (
-    <div ref={containerRef} className="relative">
+    <div ref={containerRef} className="relative min-w-0">
       <div
-        className="border border-gray-300 rounded-lg p-3 min-h-[52px] focus-within:ring-2 focus-within:ring-blue-500 focus-within:border-transparent bg-white cursor-text"
+        className="border border-gray-300 rounded-lg p-3 min-h-[52px] focus-within:ring-2 focus-within:ring-blue-500 focus-within:border-transparent bg-white cursor-text min-w-0"
         onClick={() => setOpen(true)}
       >
         <div className="flex flex-wrap gap-2 mb-2">

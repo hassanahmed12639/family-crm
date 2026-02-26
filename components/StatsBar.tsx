@@ -35,16 +35,16 @@ export default function StatsBar({ leads }: StatsBarProps) {
   ];
 
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4 min-w-0">
       {cards.map((card) => (
         <div
           key={card.label}
-          className="bg-white border border-gray-200 rounded-lg p-4"
+          className="bg-white border border-gray-200 rounded-lg p-3 sm:p-4 min-w-0"
         >
-          <p className="text-2xl font-semibold text-gray-900">
+          <p className="text-xl sm:text-2xl font-semibold text-gray-900 truncate">
             {card.value}
           </p>
-          <p className="text-sm text-gray-500 mt-0.5">
+          <p className="text-xs sm:text-sm text-gray-500 mt-0.5 truncate">
             {card.label}
           </p>
         </div>

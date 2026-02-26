@@ -33,23 +33,23 @@ export default function LoginForm() {
   }
 
   return (
-    <div className="min-h-screen flex">
+    <div className="min-h-screen flex overflow-x-hidden">
       {/* Left: Login form */}
-      <div className="w-full lg:w-[52%] bg-white flex flex-col">
-        <div className="p-8 lg:p-12">
+      <div className="w-full lg:w-[52%] bg-white flex flex-col min-w-0">
+        <div className="p-4 sm:p-8 lg:p-12">
           <img
             src="/logo.png"
             alt="Family Builders & Developers"
-            className="h-10 w-auto object-contain object-left"
+            className="h-8 sm:h-10 w-auto object-contain object-left"
           />
         </div>
 
-        <div className="flex-1 flex items-center justify-center px-8 lg:px-16 py-8">
-          <div className="w-full max-w-[400px]">
-            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900">
+        <div className="flex-1 flex items-center justify-center px-4 sm:px-8 lg:px-16 py-6 sm:py-8">
+          <div className="w-full max-w-[400px] min-w-0">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
               Welcome Back!
             </h2>
-            <p className="text-sm text-gray-500 mt-2">
+            <p className="text-xs sm:text-sm text-gray-500 mt-2">
               Sign in to access your dashboard and manage walk-in leads.
             </p>
 
@@ -140,7 +140,7 @@ export default function LoginForm() {
           </div>
         </div>
 
-        <p className="p-8 text-xs text-gray-500">
+        <p className="p-4 sm:p-8 text-xs text-gray-500">
           © Family Builders & Developers · Karachi
         </p>
       </div>

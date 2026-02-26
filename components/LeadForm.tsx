@@ -99,10 +99,10 @@ export default function LeadForm({ user, showToast, onSuccess }: LeadFormProps) 
   }
 
   return (
-    <div>
+    <div className="min-w-0">
       <div>
-        <div className="bg-white border border-gray-200 rounded-xl shadow-sm p-8">
-          <h2 className="text-xl font-bold text-gray-900">New Walk-in Lead</h2>
+        <div className="bg-white border border-gray-200 rounded-xl shadow-sm p-4 sm:p-6 lg:p-8">
+          <h2 className="text-lg sm:text-xl font-bold text-gray-900">New Walk-in Lead</h2>
           <p className="text-sm text-gray-600 mt-1">Fill in the customer details to log this walk-in inquiry</p>
           <div className="h-0.5 w-12 bg-blue-500 mt-2 mb-6" />
 
